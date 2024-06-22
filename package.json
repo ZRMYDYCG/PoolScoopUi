@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.5.2",
+    "vue": "^3.4.29",
+    "@pool-scoop/theme-chalk": "workspace:*",
+    "@pool-scoop/components":  "workspace:*",
+    "@pool-scoop/utils":  "workspace:*"
+  }
+}
