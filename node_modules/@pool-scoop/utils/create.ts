@@ -83,16 +83,18 @@ export function createNamespace(name: string) {
     return createBEM(prefixName)
 }
 
-// 测试代码示例:
-// 创建一个名为 "icon" 的BEM命名空间
-const bem = createNamespace("icon");
 
-// 测试输出
-console.log(bem.b('box')); // 输出: "p-icon-box"
-console.log(bem.e('element')); // 输出: "p-icon__element"
-console.log(bem.m('modifier')); // 输出: "p-icon--modifier"
-console.log(bem.be('box', 'element')); // 输出: "p-icon-box__element"
-console.log(bem.bm('box', 'modifier')); // 输出: "p-icon-box--modifier"
-console.log(bem.em('element', 'modifier')); // 输出: "p-icon__element--modifier"
-console.log(bem.bem('box', 'element', 'modifier')); // 输出: "p-icon-box__element--modifier"
-console.log(bem.is('ischecked', true)); // 输出: "is-ischecked"
+/*
+测试代码示例:
+    创建一个名为 "icon" 的BEM命名空间
+    const bem = createNamespace("icon");
+测试输出:
+    console.log(bem.b('box')); // 输出: "p-icon-box"
+    console.log(bem.e('element')); // 输出: "p-icon__element"
+    console.log(bem.m('modifier')); // 输出: "p-icon--modifier"
+    console.log(bem.be('box', 'element')); // 输出: "p-icon-box__element"
+    console.log(bem.bm('box', 'modifier')); // 输出: "p-icon-box--modifier"
+    console.log(bem.em('element', 'modifier')); // 输出: "p-icon__element--modifier"
+    console.log(bem.bem('box', 'element', 'modifier')); // 输出: "p-icon-box__element--modifier"
+    console.log(bem.is('ischecked', true)); // 输出: "is-ischecked"
+*/
