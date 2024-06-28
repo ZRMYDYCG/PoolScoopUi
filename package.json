@@ -10,10 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "typescript": "^5.5.2",
-    "vue": "^3.4.29",
+    "@pool-scoop/components": "workspace:*",
     "@pool-scoop/theme-chalk": "workspace:*",
-    "@pool-scoop/components":  "workspace:*",
-    "@pool-scoop/utils":  "workspace:*"
+    "@pool-scoop/utils": "workspace:*",
+    "typescript": "^5.5.2",
+    "vue": "^3.4.29"
+  },
+  "devDependencies": {
+    "unplugin-vue-define-options": "^1.4.5"
   }
 }

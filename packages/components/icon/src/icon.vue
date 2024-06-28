@@ -1,5 +1,5 @@
 <template>
-    <i :calss="bem.b()">
+    <i :calss="bem.b()" :style="style">
         <slot></slot>
     </i>
 </template>
@@ -8,6 +8,10 @@
 import { computed } from 'vue';
 import { createNamespace } from '@pool-scoop/utils/create';
 import { iconProps } from './icon';
+
+defineOptions({
+    name: 'p-icon'
+})
 
 const bem = createNamespace('icon')
 const props = defineProps(iconProps)
