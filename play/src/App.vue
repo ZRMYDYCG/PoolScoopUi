@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import Icon from '@pool-scoop/components/icon/src/icon.vue'
-
-console.log(Icon)
 </script>
 
 <template>
   <div>
     Hello World!
   </div>
-</template>
+  <p-icon></p-icon>
+</template> 
 
 <style scoped>
 
