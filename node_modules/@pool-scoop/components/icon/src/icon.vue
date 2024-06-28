@@ -1,5 +1,5 @@
 <template>
-    <i :calss="bem.b()" :style="style">
+    <i :class="bem.b()" :style="style">
         <slot></slot>
     </i>
 </template>
@@ -25,4 +25,4 @@ const style = computed(() => {
 })
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped></style>

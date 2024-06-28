@@ -6,7 +6,7 @@ import { AddCircle } from '@vicons/ionicons5';
   <div>
     Hello World!
   </div>
-  <p-icon>
+  <p-icon color="red">
     <AddCircle></AddCircle>
   </p-icon>
 </template> 
