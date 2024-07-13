@@ -5,6 +5,7 @@ hero:
   name: pool-scoop • 池勺
   text: 基于 Vue3 的组件库
   tagline: 
+  image: /avatar.png
   actions:
     - theme: brand
       text: 快速开始

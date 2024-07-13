@@ -10,17 +10,18 @@ import { createNamespace } from '@pool-scoop/utils/create';
 import { iconProps } from './icon';
 
 defineOptions({
-    name: 'p-icon'
+    name: 'el-icon'
 })
 
 const bem = createNamespace('icon')
+
 const props = defineProps(iconProps)
 
 const style = computed(() => {
-    if(!props.size && !props.color) return {}
+    if (!props.size && !props.color) return {}
     return {
-        ...(props.size ? {"font-size": props.size + "px"} : {}),
-        ...(props.color ? {color: props.color} : {})
+        ...(props.size ? { "font-size": props.size + "px" } : {}),
+        ...(props.color ? { color: props.color } : {})
     }
 })
 </script>

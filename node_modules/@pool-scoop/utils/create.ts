@@ -79,7 +79,7 @@ function createBEM(prefixName: string) {
  * @returns {Object} 包含BEM命名方法的对象。
  */
 export function createNamespace(name: string) {
-    const prefixName = `p-${name}`
+    const prefixName = `el-${name}`
     return createBEM(prefixName)
 }
 

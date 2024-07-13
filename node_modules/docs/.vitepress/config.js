@@ -1,7 +1,7 @@
 module.exports = {
-    title: 'P-UI',
-    description: '池边哲学',
     themeConfig: {
+        siteTitle: "池边哲学",
+        logo: "/avatar.png",
         lastUpdated: '最后更新时间',
         docsDir: 'docs',
         editLinks: true,
