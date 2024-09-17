@@ -1,40 +1,51 @@
 # Icon 图标
 
-p-ui 推荐使用 [xicon](https://www.xicons.org/#/) 作为组件库
+z-ui 推荐使用 xicons 作为图标库。
 
-```bash
+```
 $ pnpm install @vicons/ionicons5
 ```
 
 ## 使用图标
 
-如果你想像用例一样直接使用, 你需要全局注册组件, 才能在项目里使用。
+- 如果你想像用例一样直接使用，你需要全局注册组件，才能够直接在项目里使用。
 
 <script setup lang="ts">
-import { AddCircle } from '@vicons/ionicons5' 
+import { CashOutline } from '@vicons/ionicons5'
 </script>
-<el-icon color="red" size="20">
-    <AddCircle></AddCircle>
-</el-icon>
-<el-icon color="red" size="25">
-    <AddCircle></AddCircle>
-</el-icon>
-<el-icon color="red" size="30">
-    <AddCircle></AddCircle>
-</el-icon>
-<el-icon color="red" size="35">
-    <AddCircle></AddCircle>
-</el-icon>
+<z-icon color="red" size="40">
+  <CashOutline/>
+</z-icon>
 
-```html
+<z-icon color="green" size="40">
+  <CashOutline/>
+</z-icon>
+<z-icon color="blue" size="40">
+  <CashOutline/>
+</z-icon>
+<div>
+
+<z-icon color="red" size="60">
+  <CashOutline/>
+</z-icon>
+
+<z-icon color="green" size="60">
+  <CashOutline/>
+</z-icon>
+
+<z-icon color="blue" size="60">
+  <CashOutline/>
+</z-icon>
+</div>
+
+```vue
 <script setup lang="ts">
-  import { AddCircle } from "@vicons/ionicons5";
+import { CashOutline } from '@vicons/ionicons5'
 </script>
-
 <template>
-  <el-icon>
-    <AddCircle />
-  </el-icon>
+  <z-icon color="red" size="40">
+    <CashOutline />
+  </z-icon>
 </template>
 ```
 
@@ -42,7 +53,7 @@ import { AddCircle } from '@vicons/ionicons5'
 
 ### Icon Props
 
-| 名称  | 类型             | 默认值 | 说明     |
-| ----- | ---------------- | ------ | -------- |
-| color | string           | null   | 图标颜色 |
-| size  | number \| string | null   | 图片大小 |
+| 名称  | 类型             | 默认值    | 说明     |
+| ----- | ---------------- | --------- | -------- |
+| color | string           | undefined | 图标颜色 |
+| size  | number \| string | undefined | 图片大小 |

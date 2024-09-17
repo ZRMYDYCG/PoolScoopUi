@@ -1,17 +1,18 @@
-/**
- * 用于整合组件统一导出
- * */ 
-import { withInstall } from '@pool-scoop/utils/with-install'
-import _Icon from './src/icon.vue'
+// 用来整合组件的 最终实现导出组件
 
-const Icon = withInstall(_Icon)
+import _Icon from "./src/icon.vue";
+import { withInstall } from "@zi-shui/utils/with-install";
 
-export default Icon
-export * from './src/icon.vue'
+const Icon = withInstall(_Icon);
 
-// 这里添加的类型 可以在模板中被解析
-declare module 'vue' {
-    export interface GlobalComponents {  // 接口可以自动合并
-        ElIcon: typeof Icon
+export default Icon; // 可以通过app.use来使用 也可以通过 import方式单独使用
+
+export * from "./src/icon";
+
+
+// 这里添加的类型 可以再模版中被解析
+declare module 'vue'{
+    export interface GlobalComponents { // 我们的接口可以自动合并
+        ZIcon:typeof Icon
     }
 }

@@ -1,16 +1,29 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import '@pool-scoop/theme-chalk/src/index.scss'
 
-import Icon from '@pool-scoop/components/icon'
-import Avatar from '@pool-scoop/components/avatar'
-
-const ComponetsList = [
-    Icon,
-    Avatar
+import Icon from '@zi-shui/components/icon'
+import '@zi-shui/theme-chalk/src/index.scss'
+import Tree from '@zi-shui/components/tree/index'
+import Checkbox from '@zi-shui/components/checkbox'
+import Button from '@zi-shui/components/button'
+import Input from '@zi-shui/components/input'
+import { FormItem, Form } from '@zi-shui/components/Form'
+import Upload from '@zi-shui/components/upload'
+import Calendar from '@zi-shui/components/calendar'
+import Virtual from '@zi-shui/components/virtual-scroll-list'
+const plugins = [
+  Icon,
+  Tree,
+  Checkbox,
+  Button,
+  Input,
+  FormItem,
+  Form,
+  Upload,
+  Calendar,
+  Virtual
 ]
-
 const app = createApp(App)
-ComponetsList.forEach(item => app.use(item))
+plugins.forEach(plugin => app.use(plugin)) // 将组件注册成了全局组件 ，可以直接使用了
 
 app.mount('#app')

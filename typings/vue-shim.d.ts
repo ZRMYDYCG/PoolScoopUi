@@ -1,8 +1,7 @@
-/**
- * 为 .vue 文件做类型提示（多包依赖, 公共类型）
- * */ 
 declare module '*.vue' {
-    import type { DefineComponent } from "vue"
+    import type { DefineComponent } from 'vue'
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/ban-types
     const component: DefineComponent<{}, {}, any>
     export default component
-}
+  }
+  

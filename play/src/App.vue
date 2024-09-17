@@ -1,17 +1,51 @@
 <script setup lang="ts">
-import { AddCircle } from "@vicons/ionicons5";
+import { Random } from 'mockjs'
+import { ref } from 'vue'
+import Item from './Item.vue'
+import { DefineComponent } from 'vue'
+const totalCount = 100
+interface DataType {
+  id: number
+  name: string
+  desc: string
+  index: number
+}
+const data: Array<DataType> = []
+let index = 0
+while (index++ !== totalCount) {
+  data.push({
+    id: index,
+    name: Random.name(),
+    desc: Random.csentence(20, 120),
+    index
+  })
+}
+const items = ref(data)
 </script>
 
 <template>
-  <!-- ElIcon 组件测试 Start -->
-  <el-icon>
-    <AddCircle />
-  </el-icon>
-  <!-- ElIcon 组件测试 End -->
-  <hr>
-  <!-- ElAvatar 组件测试 Start -->
-  <el-avatar alt="这是一张测试图片" src="https://pic1.zhimg.com/v2-b845e0a9822cc150039232f54f3d1ae4_r.jpeg"></el-avatar>
-  <!-- ElAvatar 组件测试 End -->
+  <!-- 组件必须的属性 -->
+
+  <z-virtual-scroll-list
+    class="virtual-list"
+    :data-sources="items"
+    data-key="id"
+    :keeps="30"
+    :estimate-size="80"
+    :dataComponent="(Item as DefineComponent<{},{},any>)"
+  >
+  </z-virtual-scroll-list>
+
+  <z-button @click="addItem">Add Item</z-button>
+
+  <z-calendar></z-calendar>
 </template>
 
-<style scoped></style>
+<style lang="scss">
+.virtual-list {
+  width: 100%;
+  height: 500px;
+  overflow-y: scroll;
+  border: 3px solid red;
+}
+</style>
