@@ -23,6 +23,7 @@ const plugins = [
   Calendar,
   Virtual
 ]
+
 const app = createApp(App)
 plugins.forEach(plugin => app.use(plugin)) // 将组件注册成了全局组件 ，可以直接使用了
 

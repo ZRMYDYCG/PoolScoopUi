@@ -2,7 +2,6 @@
 @use 'common/var' as *;
 
 @include b(button) {
-  // BEM规范
   align-items: center;
   display: inline-flex;
   cursor: pointer;
@@ -27,9 +26,8 @@
     padding: 0 25px;
   }
 
+  /*针对不同类型处理*/
   @include when(disabled) {
-
-    // 针对不同类型处理
     &,
     &:hover,
     &:focus {

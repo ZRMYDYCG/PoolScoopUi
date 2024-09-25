@@ -1,13 +1,18 @@
 <template>
-  <button :class="[
-    bem.b(),
-    bem.m(type),
-    bem.m(size),
-    bem.is('round', round),
-    bem.is('loading', loading),
-    bem.is('disabled', disabled)
-  ]" :type="nativeType" :disabled="disabled || loading" @click="emitClick" @mousedown="emitMousedown">
-
+  <button
+    :class="[
+      bem.b(),
+      bem.m(type),
+      bem.m(size),
+      bem.is('round', round),
+      bem.is('loading', loading),
+      bem.is('disabled', disabled)
+    ]"
+    :type="nativeType"
+    :disabled="disabled || loading"
+    @click="emitClick"
+    @mousedown="emitMousedown"
+  >
     <template v-if="iconPlacement === 'left'">
       <z-icon>
         <LoadingComponent v-if="loading"></LoadingComponent>
@@ -26,9 +31,7 @@
         </template>
       </z-icon>
     </template>
-
   </button>
-
 </template>
 
 <script lang="ts" setup>
@@ -43,6 +46,7 @@ defineOptions({
   name: 'z-button',
   inheritAttrs: false
 })
+
 const props = defineProps(buttonProps);
 const emit = defineEmits(buttonEmits);
 const slots = useSlots()
@@ -53,5 +57,4 @@ const emitClick = (e: MouseEvent) => {
 const emitMousedown = (e: MouseEvent) => {
   emit('mousedown', e)
 }
-
 </script>
