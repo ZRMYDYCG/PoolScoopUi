@@ -38,23 +38,23 @@
 import LoadingComponent from '@zi-shui/components/internal-icon/Loading';
 import { createNamespace } from '@zi-shui/utils/create';
 import { buttonEmits, buttonProps } from './button';
-import ZIcon from '@zi-shui/components/icon'
+import ZIcon from '@zi-shui/components/icon';
 import { useSlots } from 'vue';
 
 const bem = createNamespace('button'); // z-button
 defineOptions({
   name: 'z-button',
   inheritAttrs: false
-})
+});
 
 const props = defineProps(buttonProps);
 const emit = defineEmits(buttonEmits);
-const slots = useSlots()
+const slots = useSlots();
 
 const emitClick = (e: MouseEvent) => {
-  emit('click', e)
-}
+  emit('click', e);
+};
 const emitMousedown = (e: MouseEvent) => {
-  emit('mousedown', e)
-}
+  emit('mousedown', e);
+};
 </script>
